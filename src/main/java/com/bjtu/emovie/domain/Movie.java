@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 @Data
-public class Moive {
+public class Movie {
     @TableId(type = IdType.AUTO)
     private Integer id;
     private String imdbId;
