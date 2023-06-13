@@ -3,10 +3,17 @@ server:
 
 spring:
   datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/booksys?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: dagu
+    password: Tony6666
+    url: jdbc:mysql://81.68.234.49:3306/nia?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  mybatis:
+    cofiguration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+      #      mapper-location : com.bjtu.dao/*.xml
+    type-aliases-package: com.bjtu.emoive.dao # ?????
+    mapUnderscoreToCamelCase: true
