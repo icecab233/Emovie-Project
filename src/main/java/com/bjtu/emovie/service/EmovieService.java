@@ -1,6 +1,7 @@
 package com.bjtu.emovie.service;
 
 import com.bjtu.emovie.domain.Movie;
+import com.bjtu.emovie.domain.User;
 
 
 /**

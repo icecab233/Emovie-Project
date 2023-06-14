@@ -17,3 +17,10 @@ spring:
       #      mapper-location : com.bjtu.dao/*.xml
     type-aliases-package: com.bjtu.emoive.dao # ?????
     mapUnderscoreToCamelCase: true
+
+rocketmq:
+  name-server: localhost:9876 #namesrv地址
+  topic: SpringTopicTest
+  producer:
+    group: producerGroup01
+    sendMessageTimeout: 5000
