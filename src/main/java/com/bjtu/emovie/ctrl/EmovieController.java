@@ -25,60 +25,60 @@ public class EmovieController {
 
     @GetMapping("/movie")
     public List<Movie> getAllMovie(){
-        return null;
+        return emovieService.getMoive();
     }
 
     @PostMapping("/movie")
     public void addMoive(String imdbId, String title, String overview, String releaseDate, long revenue){
-        return;
+        emovieService.addMoiveByEntry(imdbId, title, overview, releaseDate, revenue);
     }
 
     @PostMapping("/movie/{id}")
     public void updateMoive(int id, String imdbId, String title, String overview, String releaseDate, long revenue){
-        return;
+        emovieService.updateMoive(id, imdbId, title, overview, releaseDate, revenue);
     }
 
     @DeleteMapping("/movie/{id}")
     public void deleteMovieById(@PathVariable int id){
-        return;
+        emovieService.deleteMovieById(id);
     }
 
     // user相关
     @GetMapping("/user/{id}")
     public User getUserById(@PathVariable int id){
-        return null;
+        return emovieService.getUserById(id);
     }
 
     @GetMapping("/user")
     public List<User> getAllUser(){
-        return null;
+        return emovieService.getAllUser();
     }
 
     @PostMapping("/user")
-    public void addUser(int userName, int password, boolean isManager){
-        return;
+    public void addUser(String userName, int password, boolean isManager){
+        emovieService.addUser(userName, password, isManager);
     }
 
     @DeleteMapping("/user/{id}")
     public void deleteUser(int id){
-        return;
+        emovieService.deleteUser(id);
     }
 
     @PostMapping("/user/{id}")
     public void updateUser(int id, int password, boolean isManager){
         // 修改id用户的密码和isManager
-        return;
+        emovieService.updateUser(id, password, isManager);
     }
 
     // give_comment 相关
     @GetMapping("/comment")
     public List<Comment> getAllComment(){
-        return null;
+        return emovieService.getAllComment();
     }
-
+//1
     @PostMapping("/comment")
     public void addComment(int userId, int movieId, double rate){
-        return;
+        emovieService.addComment(userId, movieId, rate);
     }
 
     // has_history相关
@@ -87,12 +87,12 @@ public class EmovieController {
         // 用下面这个dateTime作为表里的时间
         SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateTime = tempDate.format(new java.util.Date());
-        return;
+        emovieService.addHistory(userId, movieId, dateTime);
     }
 
     // add_favorite
     @PostMapping("/favorite")
     public void addFavorite(int userId, int movieId){
-        return;
+        emovieService.addFavorite(userId, movieId);
     }
 }
