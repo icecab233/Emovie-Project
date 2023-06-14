@@ -26,7 +26,7 @@ public interface EmovieService {
 
     List<User> getAllUser();
 
-    void addUser(String userName, int password, boolean isManager);
+    void addUser(String userName, int password, int isManager);
 
     void addFavorite(int userId, int movieId);
 
@@ -36,7 +36,7 @@ public interface EmovieService {
 
     List<Comment> getAllComment();
 
-    void updateUser(int id, int password, boolean isManager);
+    void updateUser(int id, int password, int isManager);
 
     void deleteUser(int id);
 }

@@ -72,11 +72,11 @@ public class EmovieServiceImpl implements EmovieService{
     }
 //wenti
     @Override
-    public void addUser(String userName, int password, boolean isManager) {
+    public void addUser(String userName, int password, int isManager) {
         User user = new User();
         user.setUserName(userName);
         user.setPassword(String.valueOf(password));
-        user.setManager(isManager);
+        user.setIsManager(isManager);
         userDao.insert(user);
     }
 
@@ -112,10 +112,10 @@ public class EmovieServiceImpl implements EmovieService{
     }
 
     @Override
-    public void updateUser(int id, int password, boolean isManager) {
+    public void updateUser(int id, int password, int isManager) {
         User user = userDao.selectById(id);
         user.setPassword(String.valueOf(password));
-        user.setManager(isManager);
+        user.setIsManager(isManager);
         userDao.updateById(user);
     }
 

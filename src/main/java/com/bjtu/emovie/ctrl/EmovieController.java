@@ -55,7 +55,7 @@ public class EmovieController {
     }
 
     @PostMapping("/user")
-    public void addUser(String userName, int password, boolean isManager){
+    public void addUser(String userName, int password,int isManager){
         emovieService.addUser(userName, password, isManager);
     }
 
@@ -65,7 +65,7 @@ public class EmovieController {
     }
 
     @PostMapping("/user/{id}")
-    public void updateUser(int id, int password, boolean isManager){
+    public void updateUser(int id, int password, int isManager){
         // 修改id用户的密码和isManager
         emovieService.updateUser(id, password, isManager);
     }
