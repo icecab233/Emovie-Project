@@ -77,8 +77,8 @@ public class EmovieController {
     }
 //1
     @PostMapping("/comment")
-    public void addComment(int userId, int movieId, double rate){
-        emovieService.addComment(userId, movieId, rate);
+    public void addComment(int userId, int movieId, double rate, String comment){
+        emovieService.addComment(userId, movieId, rate, comment);
     }
 
     // has_history相关

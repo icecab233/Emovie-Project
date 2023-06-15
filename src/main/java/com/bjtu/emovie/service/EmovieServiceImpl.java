@@ -98,11 +98,12 @@ public class EmovieServiceImpl implements EmovieService{
     }
 
     @Override
-    public void addComment(int userId, int movieId, double rate) {
+    public void addComment(int userId, int movieId, double rate, String commentStr) {
         Comment comment = new Comment();
         comment.setUserId(userId);
         comment.setMovieId(movieId);
         comment.setRate((float) rate);
+        comment.setComment(commentStr);
         commentDao.insert(comment);
     }
 

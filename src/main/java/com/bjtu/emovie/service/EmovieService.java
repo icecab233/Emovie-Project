@@ -32,7 +32,7 @@ public interface EmovieService {
 
     void addHistory(int userId, int movieId, String dateTime);
 
-    void addComment(int userId, int movieId, double rate);
+    void addComment(int userId, int movieId, double rate, String comment);
 
     List<Comment> getAllComment();
 
